@@ -1,0 +1,8 @@
+---
+# Go to http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html
+# Give a name to bucket and add policy to be set to PublicRead
+
+Resources:
+  MyS3Bucket:
+    Type: "AWS::S3::Bucket"
+    Properties: {}
