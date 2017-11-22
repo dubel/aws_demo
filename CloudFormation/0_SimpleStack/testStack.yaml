@@ -1,0 +1,7 @@
+---
+  Resources:
+    MojBucketS3:
+      Type: "AWS::S3::Bucket"
+      Properties:
+        AccessControl: PublicRead
+        BucketName: "bukecik-mdubel-21-listopad"
