@@ -19,8 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="CRUD_Example_main" target="1.8" />
-      <module name="CRUD_Example_test" target="1.8" />
+      <module name="first-app_main" target="1.8" />
+      <module name="first-app_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
