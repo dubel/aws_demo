@@ -33,7 +33,7 @@ Resources:
            chmod 2775 /var/www
            find /var/www -type d -exec chmod 2775 {} +
            find /var/www -type f -exec chmod 0664 {} +
-           echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+           echo "<h1>ZG JUG yay! :D</h1><img src="https://s3.amazonaws.com/mdubel-test-bucket/POL_Zielona_G%C3%B3ra_COA.svg ">" > /var/www/html/index.htm
 
   WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
