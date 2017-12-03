@@ -45,7 +45,7 @@ public class NewFeaturesTest {
 
 
         // Immutable POJOs
-        originalRequest.toBuilder()
+        ListTablesRequest newOneBaby = originalRequest.toBuilder()
                 .exclusiveStartTableName(response.lastEvaluatedTableName())
                 .build();
 
@@ -77,7 +77,7 @@ public class NewFeaturesTest {
     public void blockingStreaming() throws Exception {
         S3Client client = S3Client.create();
         client.getObject(GetObjectRequest.builder()
-                        .bucket("mdubel-jug-test-bucket")
+                        .bucket("mdubel-test-bucket")
                         .key("lorem_ipsum.txt")
                         .build(),
                 StreamingResponseHandler.toFile(Paths.get("myfile.out")));
@@ -90,7 +90,7 @@ public class NewFeaturesTest {
         S3AsyncClient client = S3AsyncClient.create();
         final CompletableFuture<GetObjectResponse> future = client.getObject(
                 GetObjectRequest.builder()
-                        .bucket("mdubel-jug-test-bucket")
+                        .bucket("mdubel-test-bucket")
                         .key("lorem_ipsum.txt")
                         .build(),
                 AsyncResponseHandler.toFile(Paths.get("myfile.out")));
@@ -107,6 +107,8 @@ public class NewFeaturesTest {
                 FunctionalUtils.invokeSafely(client::close);
             }
         });
+
+
 
     }
 

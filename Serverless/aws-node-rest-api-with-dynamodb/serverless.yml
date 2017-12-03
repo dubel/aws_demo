@@ -8,7 +8,7 @@ provider:
   region: us-east-1
   profile: Michal_Dubel
   environment:
-    DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}
+    DYNAMODB_TABLE: mdubel-${self:service}-${opt:stage, self:provider.stage}
   iamRoleStatements:
     - Effect: Allow
       Action:
